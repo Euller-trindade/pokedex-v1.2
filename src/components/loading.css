@@ -1,0 +1,23 @@
+@keyframes frame {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .loading {
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    animation: frame 1s infinite;
+    border: 6px solid white;
+    border-top-color: #dd0023;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }

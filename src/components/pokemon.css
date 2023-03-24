@@ -1,0 +1,75 @@
+.pokemon-card {
+  display: flex;
+  width: 390px;
+  background-image: url("https://i.pinimg.com/564x/ad/14/ef/ad14ef5f17360fbdd9e44ab3e3e4557f.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.pokemon-image-container {
+  padding: 5px 5px 0;
+}
+.pokemon-image {
+  width: 80px;
+  height: 100px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0;
+  flex: 1;
+}
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-top h3 {
+  text-transform: capitalize;
+  color: #fff;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.pokemon-id {
+  color: #fff;
+  margin-right: 10px;
+  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+}
+.pokemon-type {
+  display: flex;
+  padding: 5px;
+  color: #fff;
+  background-color: rgba(66, 66, 66, 0.623);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.692);
+  border-radius: 5px;
+}
+.pokemon-type-text {
+  display: flex;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.pokemon-heart-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+}
+@media (max-width: 900px) {
+  .pokemon-card {
+    width: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .pokemon-card {
+    width: 300px;
+  }
+}

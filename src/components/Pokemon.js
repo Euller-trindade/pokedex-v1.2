@@ -1,25 +1,47 @@
 import React, { useContext } from "react";
-import FavoriteContext from "../contexts/FavoriteContext";
+import FavoriteContext from "../contexts/favoritesContext";
+import notAvailable from "../assets/notAvailable.jpg";
 
-const Pokemon = ({ name, image, id, types }) => {
+import "./pokemon.css";
+
+const Pokemon = (props) => {
   const { favoritePokemons, updateFavoritePokemons } =
     useContext(FavoriteContext);
+  const { pokemon } = props;
   const onHeartClick = () => {
-    updateFavoritePokemons(name);
+    updateFavoritePokemons(pokemon.name);
   };
-  let heart = favoritePokemons.includes(name) ? "❤️" : "🤍";
+  const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🤍";
   return (
     <div className="pokemon-card">
       <div className="pokemon-image-container">
-        <img src={image} alt="pokemon" className="pokemon-image" />
+        <img
+          alt={pokemon.name}
+          src={
+            pokemon["sprites"]["versions"]["generation-v"]["black-white"][
+              "animated"
+            ]["front_default"] ||
+            pokemon.sprites.front_default ||
+            notAvailable
+          }
+          className="pokemon-image"
+        />
       </div>
       <div className="card-body">
         <div className="card-top">
-          <h3>{name}</h3>
-          <div className="pokemon-id">{id}</div>
+          <h3> {pokemon.name.toUpperCase()}</h3>
+          <div className="pokemon-id">{pokemon.id}</div>
         </div>
         <div className="card-bottom">
-          <div className="pokemon-type">{types}</div>
+          <div className="pokemon-type">
+            {pokemon.types.map((type, index) => {
+              return (
+                <div key={index} className="pokemon-type-text">
+                  {type.type.name.toUpperCase()}
+                </div>
+              );
+            })}
+          </div>
           <button className="pokemon-heart-btn" onClick={onHeartClick}>
             {heart}
           </button>

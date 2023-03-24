@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  height: 100px;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-img {
+  max-width: 160px;
+}
+
+.favorites {
+  color: #fff;
+  font-size: 1.2rem;
+}
+@media (max-width: 430px) {
+  .navbar{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

@@ -13,3 +13,8 @@
   background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
+@media (max-width: 805px) {
+  .pagination-container{
+    margin-top: 50px;
+  }
+}

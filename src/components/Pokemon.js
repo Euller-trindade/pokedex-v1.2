@@ -29,7 +29,7 @@ const Pokemon = (props) => {
       </div>
       <div className="card-body">
         <div className="card-top">
-          <h3> {pokemon.name.toUpperCase()}</h3>
+          <h4> {pokemon.name.toUpperCase()}</h4>
           <div className="pokemon-id">{pokemon.id}</div>
         </div>
         <div className="card-bottom">

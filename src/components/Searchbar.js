@@ -13,13 +13,16 @@ const Searchbar = (props) => {
   };
 
   const onButtonClickHandler = () => {
-    onSearch(search);
+    onSearch(search.toLowerCase());
+    console.log(search);
   };
-
   return (
     <div className="searchbar-container">
       <div className="searchbar">
-        <input placeholder={"🔍  Buscar Pokémon..."} onChange={onChangeHandler} />
+        <input
+          placeholder={"🔍  Buscar Pokémon..."}
+          onChange={onChangeHandler}
+        />
       </div>
       <div className="searchbar-btn">
         <button onClick={onButtonClickHandler}>Buscar</button>
